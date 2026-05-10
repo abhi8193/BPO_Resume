@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title used as the default filename when saving to PDF -->
-    <title>Abhishek_Sadh_Web_CV</title>
+    <title>Abhishek_Sadh_Professional_CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -23,6 +22,34 @@
 
         .bpo-gradient {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        /* The Custom "Open to Work" Pill - Horizontal & Small */
+        .work-pill {
+            background-color: #24C85F;
+            border: 1.5px solid white;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            padding: 4px 12px;
+            gap: 6px;
+            box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+        }
+        .pill-indicator {
+            width: 3px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 1px;
+        }
+        .pill-text {
+            color: white;
+            font-weight: 800;
+            line-height: 1;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -47,102 +74,104 @@
         
         <!-- Header Section -->
         <header class="bpo-gradient text-white rounded-3xl shadow-2xl overflow-hidden relative p-8 md:p-14">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+            
             <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
-                <!-- Profile Image -->
+                <!-- Profile Pic with Custom Pill Badge -->
                 <div class="relative shrink-0 profile-container">
                     <div class="w-44 h-44 md:w-52 md:h-52 rounded-2xl border-4 border-white/20 overflow-hidden shadow-2xl bg-slate-800">
                         <img src="Abhishek_Sadh_Pic.jpg" alt="Abhishek Sadh" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Abhishek+Sadh&background=1e3a8a&color=fff&size=200'">
                     </div>
-                    <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-green-500 text-white px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl flex items-center gap-2 no-print border-2 border-white">
-                        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                        Open to Work
+                    <!-- Custom Pill Badge - Now horizontal and smaller -->
+                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 no-print">
+                        <div class="work-pill">
+                            <div class="pill-indicator"></div>
+                            <div class="pill-text">
+                                Open to Work
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="header-content flex-1 space-y-6">
+                <div class="header-content flex-1 space-y-6 pt-4 md:pt-0">
                     <div class="space-y-2">
-                        <h1 class="text-5xl md:text-6xl font-black tracking-tighter uppercase leading-none">Abhishek <span class="text-blue-300">Sadh</span></h1>
+                        <h1 class="text-5xl md:text-6xl font-black tracking-tighter uppercase leading-tight">Abhishek <span class="text-blue-300">Sadh</span></h1>
                         <p class="text-xl md:text-2xl font-light italic text-blue-100/90">Customer Excellence Specialist | Telemedicine Support</p>
                     </div>
                     
                     <div class="flex flex-wrap justify-center md:justify-start gap-3 no-print">
                         <div class="bg-white/10 px-4 py-2.5 rounded-xl flex items-center gap-3 text-sm font-bold border border-white/10">
-                            <i class="fas fa-envelope"></i> abhishek8193@gmail.com
+                            <i class="fas fa-envelope text-blue-300"></i> abhishek8193@gmail.com
                         </div>
                         <div class="bg-white/10 px-4 py-2.5 rounded-xl flex items-center gap-3 text-sm font-bold border border-white/10">
-                            <i class="fas fa-phone"></i> +91 7000478348
+                            <i class="fas fa-phone text-blue-300"></i> +91 7000478348
                         </div>
                         <a href="https://www.linkedin.com/in/abhishek-sadh93" target="_blank" class="bg-blue-600 hover:bg-blue-500 px-4 py-2.5 rounded-xl flex items-center gap-3 transition shadow-lg text-sm font-black uppercase tracking-tighter">
-                            <i class="fab fa-linkedin"></i> LinkedIn Profile
+                            <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
                     </div>
                 </div>
             </div>
         </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-4">
             
             <!-- Work Experience -->
             <div class="lg:col-span-8 space-y-8">
                 <section class="glass-card p-8 md:p-12 rounded-3xl shadow-xl">
                     <h2 class="text-2xl font-black text-slate-900 mb-10 flex items-center gap-4">
                         <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
-                        Professional Experience
+                        Work History
                     </h2>
 
                     <div class="space-y-12">
-                        <!-- Binary Geckos -->
+                        <!-- Company Block -->
                         <div class="experience-block">
                             <div class="flex flex-col md:flex-row justify-between md:items-center gap-2 mb-2">
                                 <h3 class="text-2xl font-black text-blue-900 uppercase">Binary Geckos (Courage Rx)</h3>
-                                <span class="text-[10px] font-black bg-blue-600 text-white px-3 py-1 rounded-full w-fit">SEP 2025 - MAR 2026</span>
+                                <span class="text-[10px] font-black bg-blue-600 text-white px-3 py-1 rounded-full w-fit">2025 - 2026</span>
                             </div>
                             <p class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-4">Customer Service Representative</p>
                             <ul class="space-y-4 text-slate-600 font-medium text-sm">
-                                <li class="flex gap-3"><i class="fas fa-check text-blue-500 mt-1"></i> Primary contact for US telemedicine patients resolving queries on prescriptions and services.</li>
-                                <li class="flex gap-3"><i class="fas fa-check text-blue-500 mt-1"></i> Ensured 100% HIPAA-aligned handling of sensitive medical data.</li>
+                                <li class="flex gap-3"><i class="fas fa-check text-blue-500 mt-1"></i> Managed primary POC for US telemedicine patients regarding prescriptions and services.</li>
+                                <li class="flex gap-3"><i class="fas fa-check text-blue-500 mt-1"></i> Ensured HIPAA-aligned handling of sensitive medical data.</li>
                                 <li class="flex gap-3"><i class="fas fa-check text-blue-500 mt-1"></i> Improved response efficiency and customer satisfaction through clear communication.</li>
                             </ul>
                         </div>
 
-                        <!-- Agents Only -->
                         <div class="experience-block">
                             <div class="flex flex-col md:flex-row justify-between md:items-center gap-2 mb-2">
                                 <h3 class="text-2xl font-black text-slate-900 uppercase">Agents Only (GIG CX)</h3>
-                                <span class="text-[10px] font-black bg-slate-200 text-slate-700 px-3 py-1 rounded-full w-fit">JAN 2025 - JUL 2025</span>
+                                <span class="text-[10px] font-black bg-slate-200 text-slate-700 px-3 py-1 rounded-full w-fit">2025</span>
                             </div>
                             <p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-4">AI Training & Content Contributor</p>
                             <ul class="space-y-4 text-slate-600 font-medium text-sm">
                                 <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Contributed to AI training projects through podcast recordings and scripted content.</li>
                                 <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Created high-quality voice recordings aligned with project guidelines and quality standards.</li>
-                                <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Assisted in improving AI model responses through accurate and structured delivery.</li>
                             </ul>
                         </div>
 
-                        <!-- Kelly Services -->
                         <div class="experience-block">
                             <div class="flex flex-col md:flex-row justify-between md:items-center gap-2 mb-2">
                                 <h3 class="text-2xl font-black text-slate-900 uppercase">Kelly Services</h3>
-                                <span class="text-[10px] font-black bg-slate-200 text-slate-700 px-3 py-1 rounded-full w-fit">MAY 2024 - NOV 2024</span>
+                                <span class="text-[10px] font-black bg-slate-200 text-slate-700 px-3 py-1 rounded-full w-fit">2024</span>
                             </div>
                             <p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-4">Customer Service Representative</p>
                             <ul class="space-y-4 text-slate-600 font-medium text-sm">
                                 <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Handled high-volume customer queries via chat and email support.</li>
-                                <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Ensured quick resolution with a focus on first-contact resolution.</li>
-                                <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Maintained SLA targets and delivered quality customer experience.</li>
+                                <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Focused on SLA targets and first-contact resolution.</li>
                             </ul>
                         </div>
 
-                        <!-- Kochar Infotech -->
                         <div class="experience-block">
                             <div class="flex flex-col md:flex-row justify-between md:items-center gap-2 mb-2">
                                 <h3 class="text-2xl font-black text-slate-900 uppercase">Kochar Infotech (Meesho)</h3>
-                                <span class="text-[10px] font-black bg-slate-200 text-slate-700 px-3 py-1 rounded-full w-fit">MAR 2022 - MAR 2024</span>
+                                <span class="text-[10px] font-black bg-slate-200 text-slate-700 px-3 py-1 rounded-full w-fit">2022 - 2024</span>
                             </div>
                             <p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-4">Customer Support Executive</p>
                             <ul class="space-y-4 text-slate-600 font-medium text-sm">
-                                <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Handled 100+ daily chat interactions with high accuracy and efficiency.</li>
-                                <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Documented customer interactions and ensured timely issue resolution.</li>
+                                <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Handled 100+ daily interactions with high efficiency.</li>
+                                <li class="flex gap-3"><i class="fas fa-check text-slate-400 mt-1"></i> Documented interactions and ensured timely issue resolution.</li>
                             </ul>
                         </div>
                     </div>
@@ -165,7 +194,7 @@
                 <!-- Education -->
                 <section class="glass-card p-8 rounded-3xl">
                     <h2 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 italic">Education</h2>
-                    <p class="text-sm font-black text-slate-900">B.E. Civil Engineering</p>
+                    <p class="text-sm font-black text-slate-900 leading-tight">B.E. Civil Engineering</p>
                     <p class="text-[10px] font-bold text-slate-500 uppercase">RGPV, Bhopal | 2014</p>
                 </section>
 
@@ -179,8 +208,8 @@
                         <i class="fas fa-file-pdf"></i> Download Classic CV
                     </a>
                     
-                    <p class="text-[9px] text-slate-400 text-center font-bold italic tracking-tighter">
-                        Web version for online viewing | Classic for ATS portals
+                    <p class="text-[9px] text-slate-400 text-center font-bold italic tracking-tighter opacity-70">
+                        Select "Save as PDF" for the Web version
                     </p>
                 </div>
             </aside>
